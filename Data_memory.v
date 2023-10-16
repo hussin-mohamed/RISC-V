@@ -17,7 +17,7 @@ module Data_memory
 
 
 
-always @(posedge clk)  begin
+initial  begin
 	$readmemb("data.txt",ram);
 end
 
