@@ -15,7 +15,7 @@ begin
 regwrite=1;
 immsrc='b00;
 alusrc=1;
-memwrite=1;
+memwrite=0;
 resultsrc=1;
 branch=0;
 jump=0;
