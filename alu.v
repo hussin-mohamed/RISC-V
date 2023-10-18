@@ -22,8 +22,8 @@ case (alu_ctrl)
     end
     3'b101:
     begin
-    zero=(a-b<0)?1:0;
-    c=sub;
+    c=(a-b<0)?1:0;
+    zero=0;
     end
     3'b011:
     begin
