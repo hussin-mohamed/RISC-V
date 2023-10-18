@@ -1,7 +1,7 @@
 `timescale 1ns / 1ns
-module control_unit(input[29:0] instr,input zero,output reg memwrite,regwrite,alusrc,output reg[2:0] aluctrl,output reg [1:0]immsrc,resultsrc,output pcsrc);
+module control_unit(input[30:0] instr,input zero,output reg memwrite,regwrite,alusrc,output reg[2:0] aluctrl,output reg [1:0]immsrc,resultsrc,output pcsrc);
 wire[6:0] op = instr[6:0];
-wire funct7=instr[29];
+wire funct7=instr[30];
 wire[2:0] funct3=instr[14:12];
 reg jump;
 reg branch;
@@ -101,7 +101,7 @@ begin
 case(funct3)
 'b000:
 begin
-if(op[5]&funct7)
+if(op[5]==1&&funct7==1)
 aluctrl='b001;
 else
 aluctrl='b000;
