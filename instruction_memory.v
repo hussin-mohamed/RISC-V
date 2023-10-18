@@ -7,7 +7,7 @@ module instruction_memory
 );
 
 	// Declare the RAM variable
-	reg [DATA_WIDTH-1:0] rom[63:0];
+	reg [DATA_WIDTH-1:0] rom[90:0];
 	initial
 	begin
     $readmemh("program.txt",rom);
