@@ -11,15 +11,9 @@ module Data_memory
 );
 
 	// Declare the RAM variable
-	reg [DATA_WIDTH-1:0] ram[63:0];
+	reg [DATA_WIDTH-1:0] ram[200:0];
 
 	// Variable to hold the registered read address
-
-
-
-initial  begin
-	$readmemb("data.txt",ram);
-end
 
 	always @ (negedge clk)
 	begin
