@@ -14,7 +14,7 @@ pc_plus4 pc_plus41(pc_new,pc_plus);
 instruction_memory memory1(pc_new,instr);
 extend extend(instr[31:7],immsrc,immext);
 pc_target target(immext,pc_new,pc_target);
-control_unit control(instr[29:0],zero,memwrite,regwrite,alusrc,aluctrl,immsrc,resultsrc,pcsrc);
+  control_unit control(instr[30:0],zero,memwrite,regwrite,alusrc,aluctrl,immsrc,resultsrc,pcsrc);
 Register_file reg1(result,clk,regwrite,a,b,c,rd1,rd2);
 mux mux2(alusrc,rd2,immext,srcb);
 alu alu(aluctrl,rd1,srcb,aluresult,zero);
