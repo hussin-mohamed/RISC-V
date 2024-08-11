@@ -15,7 +15,7 @@ module Data_memory
 
 	// Variable to hold the registered read address
 
-	always @ (negedge clk)
+	always @ (posedge clk)
 	begin
 		// Write
 		if (we)
