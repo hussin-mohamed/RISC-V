@@ -4,7 +4,7 @@ reg [31:0] ram[2**5-1:0];
 initial  begin
     ram[0]=0;
 end
-always@(negedge clk)
+    always@(posedge clk)
 begin
 if(write)
 ram [write_add] = data_received;
